@@ -13,6 +13,13 @@ const BlogDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    /**
+     * Fetches a blog from the database based on the provided ID,
+     * updates the state with the retrieved blog data,
+     * and handles the case where no document with the ID exists.
+     *
+     * @return {Promise<void>} - A Promise that resolves once the function is completed.
+     */
     const fetchBlog = async () => {
       const docRef = doc(db, 'blogs', id);
       const docSnap = await getDoc(docRef);
@@ -31,8 +38,8 @@ const BlogDetail = () => {
     return (
       <>
         <nav className="sticky top-0 z-50 flex justify-between items-center p-4 border-b mb-4 bg-gray-100">
-          <a href="#" onClick={() => router.push('/')} className="text-lg justify-between items-center flex font-bold"> 
-          <ArrowLeftIcon className="w-5 h-5 mr-2" />Blog Editor</a>
+          <a href="#" onClick={() => router.push('/')} className="text-lg justify-between items-center flex font-bold">
+            <ArrowLeftIcon className="w-5 h-5 mr-2" />Blog Editor</a>
         </nav>
         <div className="w-50 mx-auto p-4">
           <div className="animate-pulse">
@@ -51,7 +58,7 @@ const BlogDetail = () => {
     <>
       <nav className="sticky top-0 z-50 flex justify-between items-center p-4 border-b mb-4 bg-gray-100">
         <a href="#" onClick={() => router.push('/')} className="text-lg justify-between items-center flex font-bold">
-        <ArrowLeftIcon className="w-5 h-5 mr-2" /> Blog Editor</a>
+          <ArrowLeftIcon className="w-5 h-5 mr-2" /> Blog Editor</a>
       </nav>
       <div className="w-50 mx-auto p-4">
         <h1 className="text-4xl font-bold mb-5 mt-5 text-center">{blog.title}</h1>

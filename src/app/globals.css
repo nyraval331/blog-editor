@@ -106,3 +106,32 @@
     transform: rotate(360deg);
   }
 }
+.bg-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.h-full {
+  height: 30rem;
+}
+
+.ml-70x {
+  margin-left: 70px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
