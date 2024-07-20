@@ -34,6 +34,7 @@ const BlogDetail = () => {
     fetchBlog();
   }, [id]);
 
+  console.log("blogs", blog)
   if (loading) {
     return (
       <>
