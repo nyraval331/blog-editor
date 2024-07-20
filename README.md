@@ -38,7 +38,7 @@ Before you begin, ensure you have met the following requirements:
 
 3. **Setup Environment Variables**
 
-    - Create a `.env` file in the root directory of your project and add the necessary environment variables for your Firebase configuration. Example:
+    - Create a `.env.local` file in the root directory of your project and add the necessary environment variables for your Firebase configuration. Example:
 
         ```env
         NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
@@ -47,6 +47,7 @@ Before you begin, ensure you have met the following requirements:
         NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
         NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
         NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+        NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your-measurement-id
         ```
 
 4. **Build the Project**
